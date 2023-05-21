@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import Categories from "./types/Categories";
-import { Header } from "./components/Header";
+import { Header } from "./components/Header/Header";
+import { Canvas } from "./components/Canvas/Canvas";
 
 function App() {
   const [categories, setCategories] = useState<Categories>({
@@ -16,6 +17,9 @@ function App() {
   return (
     <div className="App">
       <Header amount={categoriesAmount} />
+      <div className="container__canvas">
+        <Canvas />
+      </div>
     </div>
   );
 }
